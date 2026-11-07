@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#160d2b">
+<title>A Little Diwali Wish For You ❤️</title>
+<style>
+  :root { --gold:#ffd783; --cream:#fff4df; --pink:#ffb8cb; }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; min-height:100vh; color:var(--cream);
+    font-family: Georgia, 'Times New Roman', serif;
+    background: radial-gradient(ellipse at 50% 0%, #55306d 0%, #241333 42%, #100b20 100%);
+    overflow-x:hidden;
+  }
+  .stars, .petals { position:fixed; inset:0; pointer-events:none; overflow:hidden; }
+  .star { position:absolute; width:3px; height:3px; border-radius:50%; background:#fff1c2; opacity:.7; animation:twinkle 2.8s infinite alternate; }
+  @keyframes twinkle { from{opacity:.15;transform:scale(.7)} to{opacity:.9;transform:scale(1.35)} }
+  .wrap { width:min(720px, 92%); margin:0 auto; padding:38px 0 60px; position:relative; z-index:1; }
+  .hero { text-align:center; padding:28px 16px 24px; }
+  .eyebrow { color:var(--gold); letter-spacing:3px; text-transform:uppercase; font:12px Arial,sans-serif; }
+  h1 { font-size:clamp(38px, 8vw, 64px); line-height:1.05; margin:16px 0 12px; color:#ffe4a8; font-weight:normal; text-shadow:0 0 28px #ffbd6a55; }
+  .subtitle { font-size:18px; line-height:1.7; color:#f8e9ef; max-width:520px; margin:0 auto; }
+  .diya-row { display:flex; justify-content:center; gap:24px; margin:25px 0 30px; }
+  .diya { font-size:38px; filter:drop-shadow(0 0 13px #ffb347); animation:glow 1.8s ease-in-out infinite alternate; }
+  @keyframes glow { from{filter:drop-shadow(0 0 5px #ff9f43)} to{filter:drop-shadow(0 0 19px #ffd36b)} }
+  button {
+    border:1px solid #f6ce86; border-radius:999px; padding:14px 25px;
+    color:#27152d; background:linear-gradient(135deg,#ffe8ae,#eeb65f);
+    font: bold 15px Arial,sans-serif; cursor:pointer; box-shadow:0 8px 28px #0005;
+    transition:transform .2s, box-shadow .2s;
+  }
+  button:hover { transform:translateY(-2px); box-shadow:0 12px 32px #ffbf6250; }
+  .section {
+    display:none; margin:18px 0; padding:26px clamp(20px,5vw,38px);
+    border:1px solid #f4d18b55; border-radius:22px;
+    background:linear-gradient(145deg,#ffffff12,#ffffff07);
+    box-shadow:0 14px 45px #0003; backdrop-filter:blur(8px);
+    animation:rise .65s ease both;
+  }
+  .section.show { display:block; }
+  @keyframes rise { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
+  h2 { color:var(--gold); font-weight:normal; font-size:29px; margin:0 0 14px; }
+  p { font-size:17px; line-height:1.85; margin:10px 0; color:#fff1e9; }
+  .care-list { padding:0; list-style:none; margin:18px 0 0; }
+  .care-list li { position:relative; padding:13px 0 13px 34px; border-bottom:1px solid #ffffff18; font-size:16px; line-height:1.7; }
+  .care-list li:last-child { border:0; }
+  .care-list li:before { content:"✦"; position:absolute; left:5px; top:15px; color:var(--pink); }
+  .signature { text-align:center; color:#ffd995; font-size:21px; line-height:1.7; margin-top:22px; }
+  .footer { text-align:center; color:#d7bfd4; font:12px Arial,sans-serif; margin-top:28px; letter-spacing:1px; }
+  .heart { display:inline-block; color:#ff9bb8; animation:beat 1.2s infinite; }
+  @keyframes beat { 50%{transform:scale(1.25)} }
+  .hidden-note { text-align:center; margin-top:20px; }
+  .hidden-note p { color:#ffe3b0; }
+  @media(max-width:480px){ .wrap{padding-top:18px} .section{padding:23px 19px} p{font-size:16px} }
+</style>
+</head>
+<body>
+<div class="stars" id="stars"></div>
+<div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">A little something from me to you</div>
+    <h1>Happy Diwali,<br>my favourite person <span class="heart">♥</span></h1>
+    <p class="subtitle">Even though we're miles apart, I wanted to send a little warmth, light and love your way.</p>
+    <div class="diya-row"><span class="diya">🪔</span><span class="diya">✨</span><span class="diya">🪔</span></div>
+    <button id="openBtn">Open your Diwali wishes ✨</button>
+  </header>
+
+  <main>
+    <section class="section" id="wish">
+      <h2>A wish just for you 🪔</h2>
+      <p>Happy Diwali, my love!</p>
+      <p>May your life always be filled with happiness, peace, success and beautiful moments. Just like these little diyas light up the darkness, I hope your smile lights up every single day.</p>
+      <p>I hope this festival brings you new hopes, lovely memories and all the good things your heart deserves.</p>
+    </section>
+
+    <section class="section" id="care">
+      <h2>Three little things, okay? ❤️</h2>
+      <ul class="care-list">
+        <li>Please take care of yourself. Your health and happiness matter so much to me.</li>
+        <li>Don't stress too much. Whatever happens, take things one day at a time.</li>
+        <li>Whenever you feel low, remember that someone is always cheering for you.</li>
+        <li>Please keep smiling. Your smile is one of my favourite things in this world.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="letter">
+      <h2>A little message from my heart 💌</h2>
+      <p>I wish I could be there with you today, celebrate Diwali together, see your beautiful smile and enjoy all the little moments.</p>
+      <p>But until that day comes, please take care of yourself. I may not be right beside you, but I'm always wishing the very best for you.</p>
+      <p>Distance may keep us apart for now, but it can't stop me from caring about you, supporting you and wanting to see you happy.</p>
+      <p>May your days be bright, your heart be peaceful and your smile never fade.</p>
+      <div class="signature">Happy Diwali, my girl!<br>Sending you the biggest hug <span class="heart">♥</span></div>
+      <div class="hidden-note">
+        <button id="hugBtn">One more little surprise 💗</button>
+        <p id="hug" hidden>Imagine this is me giving you the warmest, longest hug. I wish I could do it for real. ❤️</p>
+      </div>
+    </section>
+  </main>
+  <div class="footer">MADE WITH LOVE, JUST FOR YOU ✨</div>
+</div>
+<script>
+  const stars = document.getElementById('stars');
+  for (let i=0; i<65; i++) {
+    const s=document.createElement('i'); s.className='star';
+    s.style.left=Math.random()*100+'%'; s.style.top=Math.random()*100+'%';
+    s.style.animationDelay=(Math.random()*3)+'s'; s.style.animationDuration=(1.5+Math.random()*2.5)+'s';
+    stars.appendChild(s);
+  }
+  document.getElementById('openBtn').addEventListener('click', () => {
+    ['wish','care','letter'].forEach((id, index) => {
+      const el=document.getElementById(id);
+      el.classList.add('show');
+      el.style.animationDelay=(index*.18)+'s';
+    });
+    document.getElementById('openBtn').textContent='Your wishes are open ❤️';
+    document.getElementById('openBtn').disabled=true;
+    document.getElementById('wish').scrollIntoView({behavior:'smooth',block:'start'});
+  });
+  document.getElementById('hugBtn').addEventListener('click', () => {
+    document.getElementById('hug').hidden=false;
+    document.getElementById('hugBtn').textContent='Sending you love ❤️';
+  });
+</script>
+</body>
+</html>
